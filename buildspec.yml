@@ -14,7 +14,7 @@ phases:
     commands:
       - echo Build started on `date` edited
       - echo Building the Docker image          
-      - docker build . -t calculator-test
+      - docker build . -t calculator-test:latest
       #- docker tag calculator-test:latest public.ecr.aws/z9p7l6s8/c-hello-world:latest
       - docker tag calculator-test:latest bryan292/calculator-test
   post_build:
@@ -23,4 +23,3 @@ phases:
       - echo Pushing the Docker image to ECR and Docker Hub
       #- docker push public.ecr.aws/z9p7l6s8/c-hello-world:latest
       - docker push bryan292/calculator-test:latest
-
