@@ -24,4 +24,3 @@ Usage
 ---
 
 `npm start`
-test
